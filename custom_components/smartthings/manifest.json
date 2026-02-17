@@ -2,7 +2,7 @@
   "domain": "smartthings",
   "name": "SmartThings (Energy Fix)",
   "version": "2026.2.2",
-  "codeowners": ["@joostlek"],
+  "codeowners": ["@zielaq"],
   "config_flow": true,
   "dependencies": ["application_credentials"],
   "dhcp": [
