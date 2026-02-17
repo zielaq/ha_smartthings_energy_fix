@@ -42,13 +42,16 @@ def _get_power_consumption(device) -> dict[str, Any] | None:
 
 
 def _needs_delta_fix(report: dict[str, Any]) -> bool:
-    """True if device reports energy=0 but has deltaEnergy data."""
+    """True if device reports energy=0 and has a deltaEnergy field.
+
+    Does not require deltaEnergy > 0 at this moment — the device may be
+    off or between reporting windows. The sensor will accumulate once
+    deltaEnergy starts arriving.
+    """
     energy = report.get("energy", 0)
-    delta = report.get("deltaEnergy", 0)
     return (
         (not isinstance(energy, (int, float)) or energy == 0)
-        and isinstance(delta, (int, float))
-        and delta > 0
+        and "deltaEnergy" in report
     )
 
 
