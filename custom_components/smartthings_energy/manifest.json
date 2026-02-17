@@ -1,0 +1,12 @@
+{
+  "domain": "smartthings_energy",
+  "name": "SmartThings Energy Fix",
+  "version": "1.0.0",
+  "codeowners": ["@zielaq"],
+  "config_flow": true,
+  "after_dependencies": ["smartthings"],
+  "documentation": "https://github.com/zielaq/ha_smartthings_energy_fix",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "requirements": ["pysmartthings==3.5.2"]
+}

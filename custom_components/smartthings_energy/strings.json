@@ -1,0 +1,10 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SmartThings Energy Fix",
+        "description": "Adds accumulating energy sensor for Samsung TVs where the built-in SmartThings energy sensor always shows 0. Click Submit to add."
+      }
+    }
+  }
+}

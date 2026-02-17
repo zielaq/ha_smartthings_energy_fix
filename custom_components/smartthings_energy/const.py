@@ -1,0 +1,1 @@
+DOMAIN = "smartthings_energy"
